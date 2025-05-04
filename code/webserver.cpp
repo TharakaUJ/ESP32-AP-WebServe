@@ -10,6 +10,7 @@ void handleRoot() {
 
 void setupWebserver() {
   // Access point setup
+  WiFi.setTxPower(WIFI_POWER_MINUS_1dBm); // Options: 19.5, 15, 11, 8.5, 7, 5, 2, -1 (WIFI_POWER_MINUS_1dBm) dBm
   WiFi.softAP("ESP32_AP", "12345678");
 
   Serial.println("Access Point Started");
